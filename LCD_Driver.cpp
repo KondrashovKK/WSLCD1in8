@@ -279,7 +279,7 @@ void LCD_Driver::LCD_Clear(UWORD Color)
 void LCD_Driver::LCD_ClearBuf(void)
 {
     UWORD x, y;
-    UWORD Color = 0xffff;
+    UWORD Color = 0;
     for (y = 0; y < 128; y++) {
         for (x = 0; x < 160; x++ ) {//1 pixel = 2 byte
             spiram->SPIRAM_WR_Byte((x + y * 160)* 2, Color >> 8);
